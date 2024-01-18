@@ -10,31 +10,78 @@
 
 <body>
     <nav id="desktop-nav">
-        <div class="logo">Wilbert</div>
+        <div class="logo"></div>
         <div>
             <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
     <section id="profile">
         <div class="section_pic-container">
-            <img src="./assets/Wilb_Picture.jpg" alt="profilePic"/>
+            <img src="./assets/Wilb_Picture.jpg" alt="profilePic" />
         </div>
         <div class="section_text">
             <p class="section_text_p1">Hello I'm</p>
-            <h1 class="title">John Wilbert Laino</h1>
+            <h1 class="title">John Wilbert Laiño</h1>
             <p class="section_text_p2">Computer Science Student</p>
             <div class="socials-container">
-                <img src="./assets/github.png"
-                alt="Github Profile"
-                class="icon"
-                onclick="location.href='https://github.com/john-wilbert'"/>
+                <img src="./assets/github.png" alt="Github Profile" class="icon"
+                    onclick="location.href='https://github.com/john-wilbert'" />
             </div>
         </div>
     </section>
-</body>
+    <section id="about">
+        <div class="about-container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./assets/aboutmewilb.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>Python, C#, C++, Java, HTML, CSS, JavaScript</li>
+                            <li><span>Tools</span><br>Blender, Adobe Illustrator, Adobe Photoshop, Roblox Studio, Figma</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>College | B.S Computer Science</span><br>Mapúa Malayan Colleges Laguna (June 2022 - Present)
+                            </li>
+                            <li><span>Senior High School | ICT</span><br>Mapúa Malayan Colleges Laguna (August 2020 - May 2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+</body>
 </html>
