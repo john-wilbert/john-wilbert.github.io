@@ -48,34 +48,57 @@
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Languages</span><br>Python, C#, C++, Java, HTML, CSS, JavaScript</li>
-                            <li><span>Tools</span><br>Blender, Adobe Illustrator, Adobe Photoshop, Roblox Studio, Figma</li>
+                            <li><span>Tools</span><br>Blender, Adobe Illustrator, Adobe Photoshop, Roblox Studio, Figma
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>College | B.S Computer Science</span><br>Mapúa Malayan Colleges Laguna (June 2022 - Present)
-                            </li>
-                            <li><span>Senior High School | ICT</span><br>Mapúa Malayan Colleges Laguna (August 2020 - May 2022)</li>
+                            <li><span>Mapúa Malayan Colleges Laguna (June 2022 - Present)</span><br>College | B.S
+                                Computer Science</li>
+                            <li><span>Mapúa Malayan Colleges Laguna (August 2020 - May 2022)</span><br>Senior High
+                                School | ICT</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <section id="contact">
+        <p class="section_text_p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/gmail.png" alt="emailIcon" class="icon contact-icon">
+                <p><a href="mailto:wilbertlaino21@gmail.com">wilbertlaino21@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="footer-nav-links-container">
+                <ul class="footer-nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 John Wilbert Laiño. All Rights Reserved.</p>
+    </footer>
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
+        function opentab(tabname) {
+            for (tablink of tablinks) {
                 tablink.classList.remove("active-link")
             }
-            for(tabcontent of tabcontents){
+            for (tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab")
             }
             event.currentTarget.classList.add("active-link")
@@ -84,4 +107,5 @@
     </script>
 
 </body>
+
 </html>
