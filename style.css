@@ -160,21 +160,38 @@ a:hover {
     .about-col-2 p {
         font-size: 10px;
     }
+
     h1.sub-title {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
-
-    .tab-links {
+    p.tab-links {
         font-size: 16px;
         margin-right: 20px;
     }
-    .tab-contents{
-        font-size: 10px;
+
+    .tab-contents ul li {
+        font-size: 23rem;
     }
-    #profile {
+
+    .tab-contents ul li span {
+        font-size: 1rem;
+    }
+
+    body #profile {
         height: 83vh;
         margin: auto;
+    }
+
+    h1.title,
+    p.section_text_p1,
+    p.section_text_p2 {
+        font-size: 1rem;
+    }
+
+    .section_pic-container img{
+        width: 200px;
+        height: 200px;
     }
 
     #contact {
@@ -182,8 +199,8 @@ a:hover {
     }
 
     footer nav {
-        height: fit-content;
-        margin-bottom: 2rem;
+        height: 10vh;
+
     }
 
     .about-container,
@@ -193,11 +210,21 @@ a:hover {
 
     .contact-info-container {
         margin: 0;
+
     }
 
-    .contact-info-container p,
-    .nav-links li a {
-        font-size: 1rem;
+    div.contact-info-container {
+        margin: 0rem;
+        display: flex;
+
+    }
+
+    div.contact-info-container p {
+        font-size: smaller;
+    }
+
+    h1.contactTitle {
+        font-size: 2rem;
     }
 
 }
@@ -334,17 +361,28 @@ section {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 2s steps(18),
-    cursor .4s step-end infinite alternate
+    animation: typing 2s steps(18)  infinite,
+        cursor .4s step-end infinite alternate
 }
 
 @keyframes cursor {
-    50%{border-color: transparent;}
+    50% {
+        border-color: transparent;
+    }
 }
 
 @keyframes typing {
-    from{width: 0;}
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    0%{
+        width: 0;
+    }
 }
+
 #socials-container {
     display: flex;
     justify-content: center;
@@ -393,6 +431,7 @@ section {
 .about-col-1 img:hover {
     filter: grayscale(0);
     transform: scale(1.1) rotate(7deg);
+    cursor: default;
 }
 
 
@@ -499,20 +538,23 @@ section {
 .contact-info-container a {
     color: #234E70;
 }
-.contact-info-container a:hover{
+
+.contact-info-container a:hover {
     color: #234E70;
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: #234E70;
-} 
+}
 
 .contact-icon {
     cursor: default;
 }
-.contactTitle{
+
+.contactTitle {
     text-align: center;
     font-size: 4rem;
 }
+
 /* FOOTER SECTION */
 
 footer {
