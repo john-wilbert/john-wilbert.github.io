@@ -9,14 +9,29 @@
 </head>
 
 <body>
-    <nav id="desktop-nav">
-        <div class="logo"></div>
+    <nav id="home">
+        <div class="logo">Wilbert</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Wilbert</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
         </div>
     </nav>
     <section id="profile">
@@ -26,7 +41,7 @@
         <div class="section_text">
             <p class="section_text_p1">Hello I'm</p>
             <h1 class="title">John Wilbert Laiño</h1>
-            <p class="section_text_p2">Computer Science Student</p>
+            <p class="section_text_p2">a Computer Science Student</p>
         </div>
     </section>
     <section id="about">
@@ -71,7 +86,7 @@
     </section>
     <section id="contact">
         <p class="section_text_p1">GET IN TOUCH</p>
-        <h1 class="title">Contact Me</h1>
+        <h1 class="contactTitle">Contact Me</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
                 <img src="./assets/gmail.png" alt="emailIcon" class="icon contact-icon">
@@ -79,7 +94,7 @@
             </div>
             <div class="contact-info-container">
                 <img src="./assets/github.png" alt="Github Profile" class="icon contact-icon">
-            <p><a href="https://github.com/john-wilbert">Github</a></p>
+                <p><a href="https://github.com/john-wilbert">Github</a></p>
             </div>
         </div>
     </section>
@@ -95,21 +110,6 @@
         </nav>
         <p>Copyright &#169; 2024 John Wilbert Laiño. All Rights Reserved.</p>
     </footer>
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link")
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab")
-            }
-            event.currentTarget.classList.add("active-link")
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
